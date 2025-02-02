@@ -5,11 +5,11 @@ from tqdm import tqdm
 ascii_chars = [chr(i) for i in range(32, 127)]
 
 # Set the target URL
-url = "http://83.136.249.42:44025/index.php"
+url = "http://ip:port/"
 
 # Create headers to mimic the behavior of the working request
 headers = {
-    "Host": "83.136.249.42:44025",
+    "Host": "ip:port",
     "Content-Type": "application/x-www-form-urlencoded",
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.6613.120 Safari/537.36",
     "Connection": "close"
