@@ -1,0 +1,36 @@
+
+<html>
+<head>
+<title>Login Portal</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  
+  <div class="flip-container" id='flippr'>
+    <div class="flipper">
+      <div class="front"></div>
+      <div class="back"></div>
+    </div>
+  </div>
+  
+  <h1 class="text" id="welcome">Login with our integrated OpenLDAP server</h1>
+  
+  <form method='post' id="theForm" action="/index.php">
+    <input type='text' id="username" name='username' placeholder='Username'>
+    <input type='password' id='password' name='password' placeholder='Password'>
+      
+    <div class='login'>
+      <a href="#"><i class="icon-cog"></i> I've forgotten my password</a>
+      <input type='submit' value='Login'>
+    </div><!-- /login -->
+  </form>
+</div><!-- /wrap -->
+
+            <div class="alert alert-danger alert-dismissible" role="alert">
+                <strong>Warning!</strong> Login failed!
+            </div>
+        
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</body>
+</html>
